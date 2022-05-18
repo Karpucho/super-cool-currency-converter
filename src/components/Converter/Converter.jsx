@@ -40,6 +40,7 @@ function Converter() {
 
   return (
     <div className = "convert_area">
+    <div className="convert_el">Введите строковое значение:</div>
       <input 
         className="form-control convert_el"
         type='text' 
