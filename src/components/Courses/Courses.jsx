@@ -7,6 +7,7 @@ const apiKey = '18585d0d3a6b8701388a2844';
 
 function Courses() {
   const [currency, setCurrency] = useState({ rub: 'RUB', usd: 'USD', eur: 'EUR'});
+  const [currencyInLi, setCurrencyInLi] = useState('рубль');
   const [listCurrency, setListCurrency] = useState({});
 
   const getCurrency = currency => {
@@ -22,19 +23,21 @@ function Courses() {
   }, [currency]);
 
   return (
-    <div>
-      <button onClick={() => getCurrency(currency.rub)}>рубли</button>
-      <button onClick={() => getCurrency(currency.usd)}>доллары</button>
-      <button onClick={() => getCurrency(currency.eur)}>евро</button>
+    <div className="courses">
+    <div className="courses_btns">
+    <button onClick={() => {getCurrency(currency.rub); setCurrencyInLi('рубль')}} className="btn btn-outline-success">Рубли</button>
+      <button onClick={() => {getCurrency(currency.usd); setCurrencyInLi('доллар')}} className="btn btn-outline-success">Доллары</button>
+      <button onClick={() => {getCurrency(currency.eur); setCurrencyInLi('евро')}} className="btn btn-outline-success">Евро</button>
+    </div>
 
-      <ul className="">
+
       {Object.entries(listCurrency).map(([currency, val]) => (
-                  <li key={currency}>
-                    <span>{val}</span>
-                    <p>{currency}</p>
-                  </li>
-                ))}
-      </ul>
+                        <ul key={currency} className="list-group list-group-horizontal-lg">
+                          <li className="list-group-item">1 {currencyInLi} равен</li>
+                          <li className="list-group-item">{val}</li>
+                          <li className="list-group-item">{currency}</li>
+                        </ul>
+                      ))}
     </div>
   );
 }

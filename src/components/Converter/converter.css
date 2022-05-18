@@ -1,0 +1,11 @@
+.convert_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 20px; */
+}
+
+.convert_el {
+  margin: 10px;
+}

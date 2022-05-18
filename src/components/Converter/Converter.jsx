@@ -38,17 +38,22 @@ function Converter() {
     }
   };
 
-
   return (
-    <div>
+    <div className = "convert_area">
       <input 
+        className="form-control convert_el"
         type='text' 
         value = {textInput}
         onChange={event => setTextInput(event.target.value)}
         onKeyDown={onKeyDown}
         placeholder='15 USD in RUB'
       />
-        {convertCurrency}
+
+      <div className="convert_el">
+          {convertCurrency}
+      </div>
+
+      <button onClick={() => getTextInput()} className="btn btn-outline-success">Рассчитать</button>
     </div>
   );
 }

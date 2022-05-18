@@ -7,9 +7,9 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg">
     <div className="container-fluid">
       <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-            <Link to='/converter' className="nav-link">конвертер</Link>
-            <Link to='/courses' className="nav-link">курсы</Link>
+        <ul className="ul_list">
+            <Link to='/converter' className="leftlink nav-link">Конвертер</Link>
+            <Link to='/courses' className="nav-link">Курсы</Link>
         </ul>
       </div>
     </div>

@@ -1,0 +1,21 @@
+.courses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-group-item {
+  /* display: flex; */
+  width: 170px;
+  margin-bottom: 3px;
+}
+
+.courses_btns {
+  display: flex;
+}
+
+.btn {
+  margin: 10px;
+  width: 150px;
+}
