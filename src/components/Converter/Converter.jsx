@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import axios from 'axios';
-import './converter.css'
+import './converter.css';
+const apiKey = '18585d0d3a6b8701388a2844';
 
 function Converter() {
 
@@ -20,7 +21,7 @@ function Converter() {
         const result = (valueToConvert * number).toFixed(2);
         setConvertCurrency(result);
       })
-      .catch(() => setConvertCurrency('Error. Please, try again'));
+      .catch(() => setConvertCurrency('Ошибка получения курса'));
   };
 
   const getTextInput = () => {
@@ -40,8 +41,14 @@ function Converter() {
 
   return (
     <div>
-    <input type='text' value = {textInput} onChange={event => setTextInput(event.target.value)} />
-      {convertCurrency}
+      <input 
+        type='text' 
+        value = {textInput}
+        onChange={event => setTextInput(event.target.value)}
+        onKeyDown={onKeyDown}
+        placeholder='15 USD in RUB'
+      />
+        {convertCurrency}
     </div>
   );
 }

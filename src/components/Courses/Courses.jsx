@@ -17,34 +17,24 @@ function Courses() {
       .catch(() => setListCurrency({ 'currency not found': '' }));
   };
 
-  // useEffect(() => {
-  //   const langBrowser = (navigator.language || navigator.userLanguage).substr(0, 2);
-  //   console.log(currency, 'ЛАНГ');
-  //   if (langBrowser === 'ru') {
-  //     getCurrency(currency.rub);
-  //   } else if (langBrowser === 'en') {
-  //     getCurrency(currency.usd);
-  //   }
-  // }, []);
-
   useEffect(() => {
-  
       getCurrency(currency.rub);
-    
   }, [currency]);
 
   return (
     <div>
-          <button onClick={() => getCurrency(currency.rub)}>рубли</button>
-          <button onClick={() => getCurrency(currency.usd)}>доллары</button>
-          <button onClick={() => getCurrency(currency.eur)}>евро</button>
+      <button onClick={() => getCurrency(currency.rub)}>рубли</button>
+      <button onClick={() => getCurrency(currency.usd)}>доллары</button>
+      <button onClick={() => getCurrency(currency.eur)}>евро</button>
 
-           {Object.entries(listCurrency).map(([currency, val]) => (
-            <div key={currency}>
-              <span>{val}</span>
-              <p>{currency}</p>
-            </div>
-          ))}
+      <ul className="">
+      {Object.entries(listCurrency).map(([currency, val]) => (
+                  <li key={currency}>
+                    <span>{val}</span>
+                    <p>{currency}</p>
+                  </li>
+                ))}
+      </ul>
     </div>
   );
 }
