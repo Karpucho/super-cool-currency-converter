@@ -2,22 +2,15 @@
   margin: 10px;
   border-radius: 10px;
   border: solid 3px rgb(221, 193, 12);
-  font-size: 20px;
-  width: 500px;
   padding: 20px;
   background:linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
 
 .nav-link {
-  border: solid 2px rgb(35, 125, 235);
   border-radius: 10px;
-  /* width: 150px; */
-}
-
-.leftlink {
-  margin-right: 130px;
-}
-
-.ul_list {
-  display:flex;
+  width: 200px;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(11, 11, 11);
+  
 }

@@ -4,16 +4,28 @@ import './navbar.css'
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg">
-    <div className="container-fluid">
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="ul_list">
-            <Link to='/converter' className="leftlink nav-link">Конвертер</Link>
+  //   <nav className="navbar navbar-expand-lg">
+  //   <div className="container-fluid">
+  //   <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+  //       <div className="navbar-nav">
+  //           <Link to='/converter' className="nav-link">Конвертер</Link>
+  //           <Link to='/courses' className="nav-link">Курсы</Link>
+  //       </div>
+  //     </div>
+  //   </div>
+  // </nav>
+  <nav className="navbar navbar-expand-lg bg-light">
+  <div className="container-fluid">
+ 
+    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div className="navbar-nav">
+               <Link to='/converter' className="nav-link">Конвертер</Link>
             <Link to='/courses' className="nav-link">Курсы</Link>
-        </ul>
+
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
   );
 }
 
