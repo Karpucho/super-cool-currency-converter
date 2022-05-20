@@ -3,6 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px;
+  background: rgb(240, 239, 237);
+  border-radius: 10px;
+  border: solid 3px black;
+  width: 30vw;
   /* margin: 20px; */
 }
 

@@ -1,16 +1,18 @@
 .navbar {
-  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   border-radius: 10px;
-  border: solid 3px rgb(221, 193, 12);
+  border: solid 3px black;
   padding: 20px;
-  background:linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  background: rgb(240, 239, 237);
+
+  width: 30vw;
+
 }
 
-.nav-link {
-  border-radius: 10px;
-  width: 200px;
-  text-align: center;
-  font-size: 30px;
-  color: rgb(11, 11, 11);
-  
+.btn_nav {
+ /* height: 100px; */
+ text-align: center;
+  /* font-size: 40px */
+  width: 300px;
 }

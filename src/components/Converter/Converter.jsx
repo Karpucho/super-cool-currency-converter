@@ -8,6 +8,9 @@ function Converter() {
 
   const [convertCurrency, setConvertCurrency] = useState('');
   const [textInput, setTextInput] = useState('');
+  const [myVal, setMyVal] = useState('');
+  const [listCurrency, setListCurrency] = useState({});
+
 
   const findValueForConvert = (obj, val) => {
     const newValue = Object.entries(obj).find(([key]) => key === val);
@@ -24,11 +27,24 @@ function Converter() {
       .catch(() => setConvertCurrency('Ошибка получения курса'));
   };
 
+  const getCurrency = currency => {
+    if (Object.entries(listCurrency).length !== 0) {
+      setListCurrency({})
+    } else {
+      axios.get(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${currency}`)
+      .then(res => {
+        setListCurrency(res.data.conversion_rates);
+      })
+      .catch(() => setListCurrency({ 'Валюты не найдены': '' }));
+    }
+  };
+
   const getTextInput = () => {
     const newStr = textInput.replace(/[^a-zA-Z0-9]/gi, '');
     const numCourse = Number(newStr.replace(/\D+/, ''));
     const fromCurrency = newStr.slice(-8, -5);
     const toCurrency = newStr.slice(-3).toUpperCase();
+    setMyVal(toCurrency)
     getCourse(numCourse, fromCurrency, toCurrency);
   };
 
@@ -40,7 +56,7 @@ function Converter() {
 
   return (
     <div className = "convert_area">
-    <div className="convert_el">Введите строковое значение:</div>
+      <div className="convert_el">Введите строковое значение:</div>
       <input 
         className="form-control convert_el"
         type='text' 
@@ -51,10 +67,17 @@ function Converter() {
       />
 
       <div className="convert_el">
-          {convertCurrency}
+        {convertCurrency}<span> </span>{myVal}
       </div>
 
       <button onClick={() => getTextInput()} className="btn btn-outline-success">Рассчитать</button>
+      <button onClick={() => getCurrency('RUB')} className="btn btn-outline-success">Доступные валюты</button>
+
+       {Object.entries(listCurrency).length === 0 ? '' : Object.entries(listCurrency).map(([currency]) => (
+        <ul key={currency} className="list-group list-group-horizontal-lg">
+          <li className="list-group-item">{currency}</li>
+        </ul>
+      ))} 
     </div>
   );
 }

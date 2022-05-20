@@ -1,18 +1,24 @@
 # React Currency Converter
 
-## Setup & Run
+Приложении для конвертации валют. Основные возможности:
+- Увидеть стоимость разнообразных валют мира, по отношению к рублю, доллару, евро.
+- Рассчитать стоимость валют по строковому шаблону. К примеру, ввести в строку поиска "20 EUR in USD"
 
-Clone or download the repository.
-Go to project's root directory and run following command in terminal to install dependencies:
+## Установка & Запуск
+
+Клонируйте или скачайте репозиторий.
+Перейдите в корневой каталог проекта и выполните следующую команду в терминале, чтобы установить зависимости:
 
 ``` JS
 npm i
 ```
 
-When this finishes, start app with:
-
+После установки зависимостей, запустите приложение с помощью:
 ``` JS
 npm start
 ```
 
-When webpack finish with bundling, app should start at: `http://localhost:3000`.
+Когда webpack завершит сборку, приложение запуститься на : `http://localhost:3000 `.
+
+
+

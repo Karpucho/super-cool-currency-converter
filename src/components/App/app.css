@@ -1,6 +1,12 @@
-.App {
+.mainApp {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
+}
+
+body {
+  background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1612706353_52-p-dengi-na-zelenom-fone-67.jpg') repeat;
+  background-size: 100%;
 }

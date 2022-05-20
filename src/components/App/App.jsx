@@ -10,7 +10,7 @@ import './app.css'
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
+    <div className="mainApp">
       <Navbar />
         <Routes>
           <Route path="/converter" element={<Converter />} />
