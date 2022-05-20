@@ -20,5 +20,15 @@ npm start
 
 Когда webpack завершит сборку, приложение запуститься на : `http://localhost:3000 `.
 
+### Стек приложения
+
+Frontend: React, Axios, API
+
+### Скриншоты
+[![2022-05-20-19-33.png](https://i.postimg.cc/y8MKF4MZ/2022-05-20-19-33.png)](https://postimg.cc/rDN7kbFV)
+[![2022-05-20-19-34.png](https://i.postimg.cc/7hZrxx2p/2022-05-20-19-34.png)](https://postimg.cc/sQqNmCKc)
+[![2022-05-20-19-34-1.png](https://i.postimg.cc/bNdfWw8n/2022-05-20-19-34-1.png)](https://postimg.cc/jLV1JKDq)
+[![2022-05-20-19-35.png](https://i.postimg.cc/N0vhK8X8/2022-05-20-19-35.png)](https://postimg.cc/18B7TqJ4)
+
 
 
